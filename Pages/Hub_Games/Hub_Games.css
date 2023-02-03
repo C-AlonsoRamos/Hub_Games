@@ -1,0 +1,33 @@
+.home{
+    margin:1rem 5rem;
+ width: 100%;
+ background-color: aqua;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap:2rem;
+ flex-wrap: wrap;
+ height: 100%;
+}
+
+.games{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   gap:1rem;
+   flex-wrap: wrap;
+}
+
+.games > a{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    width: 300px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+   margin:1rem 0;
+
+}

@@ -1,0 +1,57 @@
+section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:3rem;
+    margin:2rem
+
+}
+
+ .nav{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section > .search{
+    width: 100%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.poke{
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+width: 80%;
+grid-gap: 1rem;
+flex-wrap: wrap;
+}
+
+.poke > figure {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    width: 100%;
+    height:100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin:10px;
+}
+
+.poke > figure > img{
+width: 150px;
+height: 150px;
+transition: all ease-in-out 0.5s;
+
+}
+
+.poke > figure > img:hover{
+    scale: 1.1;
+}

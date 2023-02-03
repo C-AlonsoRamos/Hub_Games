@@ -1,0 +1,20 @@
+header{
+    height: 10vw;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.colorMode{
+   
+    width: 300px;
+   
+}
+
+#changeColor{
+    background-color: inherit;
+    border: none;
+    font-size: 50px;
+    height: 100%;
+    width: 30%;
+}
