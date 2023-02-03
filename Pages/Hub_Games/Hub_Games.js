@@ -5,9 +5,9 @@ import { initContent } from "../../main";
 let name;
 const template = () => `
 <section class="home">
-  <div>
-    <p>Bienvenido a HUB_GAMES : ${name}</p>
-    <button type="button" id="logout">⬅️ EXIT</button>
+  <div class="nav">
+    <p>Bienvenido a tu sala de juegos : ${name}</p>
+    <button type="button" id="logout" class="exit">⬅️ EXIT</button>
   </div>
   <div class="games">
     <a href="#" id ="poke">PokeApi</a>

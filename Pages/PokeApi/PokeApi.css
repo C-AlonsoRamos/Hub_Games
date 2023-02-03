@@ -1,4 +1,4 @@
-section{
+.seccion{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -12,16 +12,40 @@ section{
  .nav{
     margin-top: 2rem;
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    
+}
+
+.nav > img{
+    width: 50%;
+    height: 18rem;
+
 }
 
 section > .search{
     width: 100%;
     display:flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap:3rem;
+}
+
+.busca{
+    margin-top: 2rem;
+    padding-left: 3.5rem;
+}
+
+
+.btn{
+    background: none;
+    list-style-type: none;
+    border: none;
+    
+}
+
+.btn > img{
+    width: 5rem;
+    height: 4rem;
+    
 }
 
 .poke{
@@ -40,9 +64,9 @@ flex-wrap: wrap;
     gap:1rem;
     width: 100%;
     height:100%;
-    border: 2px solid black;
+    border: 3px solid black;
     border-radius: 5px;
-    margin:10px;
+    padding: 1rem;
 }
 
 .poke > figure > img{
@@ -52,6 +76,74 @@ transition: all ease-in-out 0.5s;
 
 }
 
+
+.clases{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1rem;
+    margin-top: 2rem;
+}
+
 .poke > figure > img:hover{
-    scale: 1.1;
+    scale: 1.5;
+}
+
+.fire{
+    background-color: rgb(198, 32, 32);
+}
+
+.grass{
+    background-color: greenyellow;
+}
+
+.water{
+    background-color: aqua;
+}
+
+.bug{
+    background-color: rgb(79, 227, 79);
+}
+.normal{
+    background-color: burlywood;
+}
+.poison{
+    background-color:slateblue;
+}
+.electric{
+    background-color: rgb(245, 245, 50);
+}
+.ground{
+    background-color:peru;
+}
+.fairy{
+    background-color: pink;
+}
+.fighting{
+    background-color: sienna;
+}
+.psychic{
+    background-color: blueviolet;
+}
+.rock{
+    background-color:darkgrey;
+}
+.ghost{
+    background-color: darkslategrey;
+}
+.ice{
+    background-color: rgb(4, 137, 137);
+}
+.dragon{
+    background-color: powderblue;
+}
+
+h2{
+    margin-top:20px;
+}
+
+p{
+    font-size: 20px;
+    font-weight: 500;
 }

@@ -1,7 +1,9 @@
 import "./Header.css";
-
+import { initContent } from "../../main";
 const template = () => `
 <div class="colorMode">
+<button type="button" id="back" class="atras"> ⬅️         
+Back</button>
 <button id="changeColor">🎨</button>
 </div>
 `;
@@ -21,7 +23,15 @@ const addListeners = () => {
   });
 };
 
+const back = () => {
+  document.querySelector("#back").addEventListener("click", () => {
+    document.querySelector("#app").innerHTML = "";
+    initContent("Hub_Games");
+  });
+};
+
 export const PrintTemplate = () => {
   document.querySelector("header").innerHTML = template();
   addListeners();
+  back();
 };

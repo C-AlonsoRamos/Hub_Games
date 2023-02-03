@@ -1,6 +1,7 @@
 import "./PokeApi.css";
 import { initContent } from "../../main";
 let mapPoked;
+
 let types = [
   "grass",
   "fire",
@@ -18,24 +19,30 @@ let types = [
   "ice",
   "dragon",
 ];
+// Creamos el template que va a ser pintado :
 const template = () => `
-<section>
+<section class="seccion">
   <div class="nav">
-    <h1>PokeApi</h1>
-    <button type="button" id="back" > ⬅️         
-    Back</button>
+    <img src="https://res.cloudinary.com/dy4mossqz/image/upload/v1675452297/img/pokemon_1_ijosts.png">
   </div>
   <div class="search">
-    <button type="button" id="buscar">Buscador</button>
-    <input type="text" id="buscador" placeholder="Search........"/>
+    <button type="button" id="buscar" class="btn"><img src="https://res.cloudinary.com/dy4mossqz/image/upload/v1675453762/img/pokeball_pfivbp.png">
+    </button>
+    <input type="text" id="buscador" 
+     class="busca"placeholder="Search........"/>
   </div>
-  <div id="tipos"></div>  
+  <div id="tipos" class="clases">
+  <button  type="button" id="allPoke" class="all">All</button>
+  </div>  
   <div id="container" class="poke"></div>
 </section>
 
 `;
-const pokemons = [];
+
+// Hacemos el fech para recuperar la informacion de la Api y se lo metemos a la constante pokemons:
+
 const getPokemons = async () => {
+  const pokemons = [];
   for (let i = 1; i <= 150; i++) {
     const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
     const info = await data.json();
@@ -44,6 +51,7 @@ const getPokemons = async () => {
   mapPokemons(pokemons);
 };
 
+// Hacemos el mapeo para tener los datos que queremos pintar :
 const mapPokemons = (pokemonsList) => {
   mapPoked = pokemonsList.map((pokemon) => ({
     image: pokemon.sprites.other.dream_world.front_default,
@@ -55,26 +63,58 @@ const mapPokemons = (pokemonsList) => {
   printPokemons(mapPoked);
 };
 
+// Creamos la función que va a pintar los datos que queremos :
 const printPokemons = (pokemons) => {
+  console.log("objeto pintado", pokemons);
   const container = document.querySelector("#container");
   container.innerHTML = "";
+  console.log(container);
   for (const pokemon of pokemons) {
     const figure = document.createElement("figure");
+    figure.classList.add(`${pokemon.type1}`);
     figure.innerHTML = `
   <img src=${pokemon.image} alt=${pokemon.name}>
   <h2>${pokemon.name}</h2>
-  <p>${pokemon.type1}</p>
-  <p>${pokemon.expe}</p>
+  <p>Type: ${pokemon.type1}</p>
+  <p>Power: ${pokemon.expe}</p>
   `;
     container.appendChild(figure);
   }
 };
 
-const back = () => {
-  document.querySelector("#back").addEventListener("click", () => {
-    initContent("Hub_Games");
-  });
+// Botón para devolver todos los pokemon:
+const allPokemons = () => {
+  const btn = document.querySelector("#allPoke");
+  document.querySelector("#container");
+  container.innerHTML = "";
+  btn.addEventListener("click", () => printPokemons(mapPoked));
 };
+
+// Botones con sus eventos y su filtro por tipo :
+
+const allBtnTypes = () => {
+  const div = document.querySelector("#tipos");
+
+  for (const type of types) {
+    const btn = document.createElement("button");
+    const text = document.createTextNode(`${type}`);
+    btn.appendChild(text);
+    btn.classList.add(`${type}`);
+    div.appendChild(btn);
+
+    btn.addEventListener("click", () => {
+      filterAllPokemon(mapPoked, `${type}`);
+    });
+  }
+};
+
+const filterAllPokemon = (array, type) => {
+  const filtered = array.filter((el) => el.type1 === type);
+
+  printPokemons(filtered);
+};
+
+// Boton del buscador , su evento y su filtro :
 
 const addListener = () => {
   const btnSearch = document.querySelector("#buscar");
@@ -93,31 +133,12 @@ const filterPokemon = (pokemons, value) => {
   printPokemons(filterPokemons);
 };
 
-const filterAllPokemon = (array, type) => {
-  const filter = array.filter((typed) => typed.type === type);
-  printPokemons(filter);
-};
-
-const allBtnTypes = () => {
-  const div = document.querySelector("#tipos");
-
-  for (const type of types) {
-    const btn = document.createElement("button");
-    const text = document.createTextNode(`${type}`);
-    btn.appendChild(text);
-    btn.classList.add(`${type}`);
-    div.appendChild(btn);
-
-    btn.addEventListener("click", () => {
-      filterAllPokemon(mapPoked, `${type}`);
-    });
-  }
-};
+// Llamamos a todas las funciones que vamos a pintar en el main :
 
 export const PrintTemplate = () => {
   document.querySelector("#app").innerHTML = template();
-  back();
   getPokemons();
-  addListener();
+  allPokemons();
   allBtnTypes();
+  addListener();
 };

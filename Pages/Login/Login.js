@@ -5,7 +5,7 @@ const template = () => `
 <section class="login">
 <h1>hub-games</h1>
 <label for="nombre">Introduce tu nombre</label>
-<input type="text" id="nombre" placeholder="............">
+<input type="text" id="nombre" placeholder="Escribe aquí tu nombre">
 <button id="loginBtn" >👌 Al vicio!!</button>
 </section>
 `;
