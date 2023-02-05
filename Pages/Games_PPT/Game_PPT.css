@@ -1,0 +1,104 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:whitesmoke;
+    padding: 2rem;
+    border-radius: 20%;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+
+.game{
+display:flex;
+justify-content:space-around;
+align-items: center;
+gap: 3rem;
+margin-top: 100px;
+
+}
+
+.player1{
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.player2{
+    
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.result{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:3rem;
+    flex-wrap: wrap;
+}
+
+.result > .result1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    border-radius: 50%;
+    flex-wrap: wrap;
+    font-size: 50px;
+}
+
+.result > .result2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    flex-wrap: wrap;
+    font-size: 50px;
+    border-radius: 50%;
+}
+
+.winner{
+    width: 400px;
+    height: 50px;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 30px;
+}
+
+.player1 > button{
+    border: none;
+    background-color: inherit;
+    font-size: 50px;
+}
+
+.player2 > button{
+    border: none;
+    background-color: inherit;
+    font-size: 50px;
+}

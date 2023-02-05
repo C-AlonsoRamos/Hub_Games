@@ -5,13 +5,14 @@ import { initContent } from "../../main";
 let name;
 const template = () => `
 <section class="home">
-  <div class="nav">
+  <div class="nav"> 
+  <button type="button" id="logout" class="exit">⬅️ EXIT</button>
     <p>Bienvenido a tu sala de juegos : ${name}</p>
-    <button type="button" id="logout" class="exit">⬅️ EXIT</button>
+   
   </div>
   <div class="games">
     <a href="#" id ="poke">PokeApi</a>
-    <a href="#"></a>
+    <a href="#" id="ppt">Game PPT</a>
     <a href="#"></a>
     <a href="#"></a>
   </div>
@@ -34,9 +35,16 @@ const poke = () => {
   });
 };
 
+const pptGame = () => {
+  document.querySelector("#ppt").addEventListener("click", () => {
+    initContent("Game_ppt");
+  });
+};
+
 export const PrintTemplate = () => {
   name = localStorage.getItem("user");
   document.querySelector("#app").innerHTML = template();
   resset();
   poke();
+  pptGame();
 };

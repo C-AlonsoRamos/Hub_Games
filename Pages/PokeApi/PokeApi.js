@@ -65,10 +65,9 @@ const mapPokemons = (pokemonsList) => {
 
 // Creamos la función que va a pintar los datos que queremos :
 const printPokemons = (pokemons) => {
-  console.log("objeto pintado", pokemons);
   const container = document.querySelector("#container");
   container.innerHTML = "";
-  console.log(container);
+
   for (const pokemon of pokemons) {
     const figure = document.createElement("figure");
     figure.classList.add(`${pokemon.type1}`);
