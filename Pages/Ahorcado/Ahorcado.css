@@ -1,0 +1,48 @@
+.container{
+width: 100vw;
+display:flex;
+flex-direction: column;
+justify-content:space-around;
+align-items: center;
+background-color: whitesmoke;
+margin:0.5rem;
+
+}
+
+
+
+img{
+    width: 300px;
+    height: 300px;
+}
+
+.respuestas{
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.letras{
+    margin-top: 50px;
+    flex-wrap: wrap;
+    height: 200px;
+display:flex;
+justify-content: center;
+align-items: center;
+gap: 0.5rem;
+    
+}
+
+ .letras > button{
+   
+    width: 60px;
+    height: 60px;
+}
+span{
+    border-bottom:2px solid black;
+    font-size: 40px;
+}

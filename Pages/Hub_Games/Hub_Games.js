@@ -13,7 +13,7 @@ const template = () => `
   <div class="games">
     <a href="#" id ="poke">PokeApi</a>
     <a href="#" id="ppt">Game PPT</a>
-    <a href="#"></a>
+    <a href="#" id="ahorcado">Ahorcado</a>
     <a href="#"></a>
   </div>
   
@@ -41,10 +41,17 @@ const pptGame = () => {
   });
 };
 
+const ahorcadoGame = () => {
+  document.querySelector("#ahorcado").addEventListener("click", () => {
+    initContent("Game_Ahorcado");
+  });
+};
+
 export const PrintTemplate = () => {
   name = localStorage.getItem("user");
   document.querySelector("#app").innerHTML = template();
   resset();
   poke();
   pptGame();
+  ahorcadoGame();
 };

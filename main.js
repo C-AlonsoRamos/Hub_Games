@@ -4,6 +4,7 @@ import { PrintTemplate as loginTemplate } from "./Pages/Login/Login";
 import { PrintTemplate as hub_GamesTemplate } from "./Pages/Hub_Games/hub_Games";
 import { PrintTemplate as PokeApiTemplate } from "./Pages/PokeApi/PokeApi";
 import { PrintTemplate as pptTemplate } from "./Pages/Games_PPT/Game_PPT";
+import { PrintTemplate as ahorcadoTemplate } from "./Pages/Ahorcado/Ahorcado";
 
 export const initContent = (route) => {
   switch (route) {
@@ -18,6 +19,9 @@ export const initContent = (route) => {
       break;
     case "Game_ppt":
       pptTemplate();
+      break;
+    case "Game_Ahorcado":
+      ahorcadoTemplate();
       break;
   }
 };
