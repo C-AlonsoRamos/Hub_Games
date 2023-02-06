@@ -2,6 +2,11 @@ import "./Hub_Games.css";
 import { PrintTemplate as loginTemplate } from "../Login/Login";
 import { initContent } from "../../main";
 
+const home = () => {
+  const back = document.querySelector(".atras");
+  back.style.display = "none";
+};
+
 let name;
 const template = () => `
 <section class="home">
@@ -14,7 +19,6 @@ const template = () => `
     <a href="#" id ="poke">PokeApi</a>
     <a href="#" id="ppt">Game PPT</a>
     <a href="#" id="ahorcado">Ahorcado</a>
-    <a href="#"></a>
   </div>
   
 </section>
@@ -54,4 +58,5 @@ export const PrintTemplate = () => {
   poke();
   pptGame();
   ahorcadoGame();
+  home();
 };

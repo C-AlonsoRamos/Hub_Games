@@ -24,7 +24,8 @@ const addListeners = () => {
 };
 
 const back = () => {
-  document.querySelector("#back").addEventListener("click", () => {
+  const backBtn = document.querySelector("#back");
+  backBtn.addEventListener("click", () => {
     document.querySelector("#app").innerHTML = "";
     initContent("Hub_Games");
   });

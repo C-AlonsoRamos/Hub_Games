@@ -1,21 +1,27 @@
 .container{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    background-color:rgb(227, 219, 219);
+    border-radius: 30px;
 }
 
 .contenedor{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:whitesmoke;
+    background-color:rgb(227, 219, 219);
     padding: 2rem;
     border-radius: 20%;
     flex-wrap: wrap;
-    margin-top: 2rem;
+    
 }
 
 
@@ -24,7 +30,7 @@ display:flex;
 justify-content:space-around;
 align-items: center;
 gap: 3rem;
-margin-top: 100px;
+flex-wrap: wrap;
 
 }
 
@@ -48,12 +54,12 @@ margin-top: 100px;
 }
 
 .result{
-    
     display: flex;
     justify-content: center;
     align-items: center;
     gap:3rem;
     flex-wrap: wrap;
+    
 }
 
 .result > .result1{
@@ -61,7 +67,7 @@ margin-top: 100px;
     justify-content: center;
     align-items: center;
     width: 150px;
-    height: 150px;
+    height: 130px;
     border: 2px solid black;
     border-radius: 50%;
     flex-wrap: wrap;
@@ -73,7 +79,7 @@ margin-top: 100px;
     justify-content: center;
     align-items: center;
     width: 150px;
-    height: 150px;
+    height: 130px;
     border: 2px solid black;
     flex-wrap: wrap;
     font-size: 50px;
@@ -81,14 +87,13 @@ margin-top: 100px;
 }
 
 .winner{
-    width: 400px;
-    height: 50px;
-   
+    
+   margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .player1 > button{

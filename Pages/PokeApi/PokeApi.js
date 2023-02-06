@@ -1,5 +1,11 @@
 import "./PokeApi.css";
 import { initContent } from "../../main";
+
+const home = () => {
+  const back = document.querySelector(".atras");
+  back.style.display = "block";
+};
+
 let mapPoked;
 
 let types = [
@@ -33,7 +39,10 @@ const template = () => `
   </div>
   <div id="tipos" class="clases">
   <button  type="button" id="allPoke" class="all">All</button>
-  </div>  
+  </div> 
+  <div class="spin">
+   <img src ="https://res.cloudinary.com/dy4mossqz/image/upload/v1675697057/img/Pokemon-Pokeball-Transparent_mymf0j.png" alt="spin ball pokemon">
+  </div> 
   <div id="container" class="poke"></div>
 </section>
 
@@ -42,6 +51,9 @@ const template = () => `
 // Hacemos el fech para recuperar la informacion de la Api y se lo metemos a la constante pokemons:
 
 const getPokemons = async () => {
+  const spiner = document.querySelector(".spin");
+  spiner.style.display = "block";
+
   const pokemons = [];
   for (let i = 1; i <= 150; i++) {
     const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
@@ -49,6 +61,7 @@ const getPokemons = async () => {
     pokemons.push(info);
   }
   mapPokemons(pokemons);
+  spiner.style.display = "none";
 };
 
 // Hacemos el mapeo para tener los datos que queremos pintar :
@@ -140,4 +153,5 @@ export const PrintTemplate = () => {
   allPokemons();
   allBtnTypes();
   addListener();
+  home();
 };

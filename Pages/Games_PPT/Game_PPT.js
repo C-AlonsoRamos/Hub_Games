@@ -1,6 +1,11 @@
 import "./Game_PPT.css";
 import { initContent } from "../../main";
 
+const home = () => {
+  const back = document.querySelector(".atras");
+  back.style.display = "block";
+};
+
 export const template = () => `
 
 <div class="container">
@@ -132,4 +137,5 @@ export const PrintTemplate = () => {
   papel1();
   tijera1();
   btnPlay();
+  home();
 };

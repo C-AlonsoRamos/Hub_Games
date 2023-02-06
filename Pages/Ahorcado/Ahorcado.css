@@ -2,47 +2,89 @@
 width: 100vw;
 display:flex;
 flex-direction: column;
-justify-content:space-around;
 align-items: center;
 background-color: whitesmoke;
 margin:0.5rem;
 
 }
 
-
+.imagen{
+    margin:20px 0px;
+}
 
 img{
     width: 300px;
-    height: 300px;
+    height: 250px;
+    border-radius: 20px;
 }
 
-.respuestas{
-    width: 300px;
-    height: 300px;
-    background-color: aqua;
+.res{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.opciones{
+    
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+}
+
+.respuestas{
+    width: 250px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.winner{
+    width: 250px;
+    height: 50px;
+   font-size: 20px;
+   font-weight: 400;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color:crimson
 }
 
 .letras{
-    margin-top: 50px;
     flex-wrap: wrap;
-    height: 200px;
-display:flex;
-justify-content: center;
-align-items: center;
-gap: 0.5rem;
-    
+    height: 220px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+   
 }
 
  .letras > button{
-   
-    width: 60px;
-    height: 60px;
+   border-radius: 10px;
+    width: 45px;
+    height: 45px;
 }
 span{
     border-bottom:2px solid black;
-    font-size: 40px;
+    font-size: 35px;
+    width: 20px;
+}
+
+#btnRandon{
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+margin-bottom: 15px;
+}
+
+.newGame{
+    margin-bottom: 20px;
+}
+
+.newGameBtn{
+    font-size: 12px;
 }

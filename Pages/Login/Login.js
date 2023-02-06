@@ -1,6 +1,11 @@
 import "./Login.css";
 import { initContent } from "../../main";
 
+const home = () => {
+  const back = document.querySelector(".atras");
+  back.style.display = "none";
+};
+
 const template = () => `
 <section class="login">
 <h1>hub-games</h1>
@@ -24,4 +29,5 @@ const addListeners = () => {
 export const PrintTemplate = () => {
   document.querySelector("#app").innerHTML = template();
   addListeners();
+  home();
 };
