@@ -106,7 +106,7 @@ const buttonsLetter = () => {
         //recorremos la palabra randon por sus letras.
         if (letra == respuesta[i]) {
           //y si la letra del btn coincide con una letra de la palabra randon
-          allspan[i].innerHTML = vocal; //se añade esa letra al span correspondiente.
+          allspan[i].innerHTML = letra; //se añade esa letra al span correspondiente.
           acierto = true; //acierto se pone en true y se suma uno a aciertos.
           aciertos++;
         }
